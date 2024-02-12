@@ -1,6 +1,5 @@
-"use client"
-
 import Link from "next/link";
+import { Searchbar } from "./Searchbar";
 
 export type NavItem = {
   name: string;
@@ -20,7 +19,8 @@ export const navItems: NavItem[] = [
 
 export const Header = () => {
   return (
-    <nav className="flex flex-row gap-8 sticky top-0 py-4 w-full px-10 bg-white z-50">
+    <nav className="flex flex-row sticky top-0 py-6 w-full px-10 bg-white z-50 items-center justify-between">
+      <div className="flex flex-row gap-8">
       {
         navItems.map((item) => (
           <Link key={item.name} href={item.path}>
@@ -28,7 +28,8 @@ export const Header = () => {
           </Link>
         ))
       }
-      <div>searchbar here</div>
+      </div>
+      <Searchbar />
     </nav>
   )
 }
