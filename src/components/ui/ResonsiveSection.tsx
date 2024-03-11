@@ -6,7 +6,7 @@ type ResponsiveSeciontType = {
 }
 
 export const ResponsiveSection = ({children, className}: ResponsiveSeciontType) => (
-  <section className={`lg:w-[980px] mx-4 lg:mx-auto ${className}`}>
+  <section className={`lg:w-[980px] mx-4 lg:mx-auto my-10 ${className}`}>
     {children}
   </section>
 )

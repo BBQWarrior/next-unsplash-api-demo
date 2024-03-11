@@ -12,7 +12,7 @@ export default async function SearchPage ({
   return (
     <main>
       {/* <Hero title={topic.title} description={topic.description} coverImage={topic.cover_photo.urls.full} /> */}
-      <ResponsiveSection className="columns-2 lg:columns-3 gap-2 mt-10">
+      <ResponsiveSection className="sm:columns-2 lg:columns-3 gap-2">
         {
           photos.results.map((photo: any) => (
             <div key={photo.id} className="mb-2">
