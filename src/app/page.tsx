@@ -24,7 +24,7 @@ export default async function Home() {
 }
 
 async function getPhotos() {
-  const res = await fetch(`${appConfig.apiUrl}/photos`, {
+  const res = await fetch(`${appConfig.apiUrl}/photos?per_page=50`, {
     headers: new Headers({
       'Authorization': `Client-ID ${appConfig.apiKey}`
     })

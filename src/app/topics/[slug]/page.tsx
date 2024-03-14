@@ -28,7 +28,7 @@ export default async function Topic ({
 }
 
 async function getTopicPhotos(param: string) {
-  const res = await fetch(`${appConfig.apiUrl}/topics/${param}/photos`, {
+  const res = await fetch(`${appConfig.apiUrl}/topics/${param}/photos?per_page=50`, {
     headers: new Headers({
       'Authorization': `Client-ID ${appConfig.apiKey}`
     })

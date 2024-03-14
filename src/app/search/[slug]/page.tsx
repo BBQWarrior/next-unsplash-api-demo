@@ -25,7 +25,7 @@ export default async function SearchPage ({
 }
 
 async function getSearchResults(param: string) {
-  const res = await fetch(`${appConfig.apiUrl}/search/photos?query=${param}`, {
+  const res = await fetch(`${appConfig.apiUrl}/search/photos?query=${param}&per_page=50`, {
     headers: new Headers({
       'Authorization': `Client-ID ${appConfig.apiKey}`
     })
